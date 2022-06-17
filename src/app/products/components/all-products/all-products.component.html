@@ -1,0 +1,17 @@
+<div class="mt-5">
+    <div class="my-2 w-25">
+        <!-- Select Box Component -->
+        <app-select-box title="Categories" [data]="categories" (selectedValue)="filterCategory($event)"></app-select-box>
+    </div>
+    <!-- Cart Holder -->
+    <div class="row" *ngIf="!loading">
+        <div class="col-md-3 col-sm-12 ucc-Click" *ngFor="let product of products">
+            <!-- Product cart Component -->
+           <app-product-card [item]="product" (data)="addToCart($event)"></app-product-card>
+        </div>
+    </div>
+</div>
+<!-- Spinner Until Data Loading -->
+<div class="text-center w-100" *ngIf="loading">
+    <app-spinner></app-spinner>  
+</div>

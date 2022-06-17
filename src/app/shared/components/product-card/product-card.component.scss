@@ -1,0 +1,33 @@
+.item {
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(202, 37, 16, 0.3);
+    transition: all 0.3s ease-in-out;
+
+    img {
+        height: 200px;
+        border-radius: 10px;
+    }
+
+    p {
+        height: 100px;
+        overflow: hidden;
+        font-size: 16px;
+    }
+
+    h4 {
+        height: 75px;
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: 800;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    span {
+        border-radius: 30x;
+    }
+}

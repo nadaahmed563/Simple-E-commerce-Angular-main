@@ -1,0 +1,24 @@
+<!-- Product Image -->
+<div class="item w-100 m-3">
+    <div  routerLink="/product-details/{{item.id}}">
+        <!-- product Image -->
+        <img src="{{item.image}}" alt="" class="w-100">
+        <div class="body">
+            <!-- Product Name -->
+            <h4 class="py-1 px-3 mt-2 cCC-bg-support1">{{item.title}}</h4>
+            <!-- Product Description -->
+            <p class="my-3 py-1 px-3">{{item.description}}</p>
+        </div>
+    </div>
+    <!-- Add To cart Button -->
+    <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
+        <button class="btn btn-success" *ngIf="!addButton" (click)="addButton = true">Add To Cart</button>
+        <!-- Add Product Quantity -->
+        <div class="d-flex w-50" *ngIf="addButton">
+            <input type="number" class="form-control" placeholder="{{amount}}"  [(ngModel)]="amount">
+            <button class="btn btn-danger" (click)="add();addButton= false">Add</button>
+        </div>
+        <!-- Produt Price -->
+        <span class="cCC-bg-pink py-1 px-2">{{item.price}} L.E</span>
+    </div>
+</div>

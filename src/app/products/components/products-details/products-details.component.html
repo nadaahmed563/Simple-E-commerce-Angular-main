@@ -1,0 +1,22 @@
+<div class="box">
+    <div class="row" *ngIf="!loading">
+        <!--product  image  -->
+        <div class="col-md-5 mx-auto">
+          <img src="{{data.image}}" alt="" class="w-100">
+          <div class="info">
+            <!-- product Information -->
+                <ul class="list-unstyled">
+                    <li><strong>Title: </strong>{{data.title}}</li>
+                    <li><strong>Category: </strong>{{data.category}}</li>
+                    <li><strong>Description: </strong>{{data.description}}</li>
+                    <li><strong>Rate: </strong>{{data.rating.rate}}</li>
+                    <li><strong>Count: </strong>{{data.rating.count}}</li>
+                    <li><strong>Price: </strong>{{data.price}} L.E</li>
+                </ul>
+          </div>
+        </div>
+    </div>
+    <div class="text-center" *ngIf="loading">
+        <app-spinner></app-spinner>
+    </div>
+</div>
